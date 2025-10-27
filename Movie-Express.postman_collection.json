@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "c972fc19-8006-4503-9e94-294824719f05",
+		"name": "Movie-Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49353490",
+		"_collection_link": "https://noviphi889-2944849.postman.co/workspace/Noviana's-Workspace~ba952568-fc7c-4d17-854f-8c55b56243f0/collection/49353490-c972fc19-8006-4503-9e94-294824719f05?action=share&source=collection_link&creator=49353490"
+	},
+	"item": [
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "List Movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"Brave New World\",\r\n    \"tahunRilis\" : \"2025\",\r\n    \"sutradara\" : \"Noviana Engelica\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"Brave New World\",\r\n    \"tahunRilis\" : \"2025\",\r\n    \"sutradara\" : \"Noviana Engelica\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/68fdf86bb1ded0ca6823444f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"68fdf86bb1ded0ca6823444f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
