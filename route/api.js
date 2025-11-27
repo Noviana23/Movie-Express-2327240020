@@ -1,6 +1,6 @@
 import express from "express";
 import * as movieController from "../controller/movieController.js";
-import * as userController from "../controller/movieController.js";
+import * as userController from "../controller/userController.js";
 import { authenticateTokenMiddleware } from "../middlewares/authenticateTokenMiddleware.js";
 
 const api = express.Router();

@@ -1,5 +1,5 @@
 import UserModel from "../models/userMovie.js";
-import { hashedPassword, hashedPassword, verifyPassword } from "../utils/hashUtils.js";
+import { hashedPassword, verifyPassword } from "../utils/hashUtils.js";
 import { getJwtToken } from "../utils/jwtUtils.js";
 
 export const signIn = async (req, res) => {
@@ -18,7 +18,7 @@ export const signIn = async (req, res) => {
         if (!user) {
             return res.status(400).send({
                 error : "Email dan Password wajib salah",
-                data : null 
+                data : null,
             });
         }
 
@@ -47,7 +47,7 @@ export const signIn = async (req, res) => {
     }
 };
 
-export const singUp = async (req, res) => {
+export const signUp = async (req, res) => {
     try {
         const { email, password } = req.body;
         
