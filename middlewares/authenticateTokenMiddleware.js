@@ -1,5 +1,3 @@
-import jwt from "jsonwebtoken";
-
 export const authenticateTokenMiddleware = (req, res, next) => {
     const authHeader = req.headers.authorization;
 

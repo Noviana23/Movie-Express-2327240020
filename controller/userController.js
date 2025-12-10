@@ -25,14 +25,14 @@ export const signIn = async (req, res) => {
         // Verifikasi password
         const isMatch = await verifyPassword(password, user.password);
         if (!isMatch) {
-            return req.status(400).send ({
+            return res.status(400).send ({
                 error : "Password salah",
                 data : null 
             });
         }
 
         // Generate token jika valid 
-        const token = getJwtToken(user.id, user_username);
+        const token = getJwtToken(user._id, user.username);
         
         return res.status(200).send({
             message :"Login berhasil",
@@ -49,7 +49,7 @@ export const signIn = async (req, res) => {
 
 export const signUp = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password, username } = req.body;
         
         if (!username || !email || !password) {
             return res.status(400).send({

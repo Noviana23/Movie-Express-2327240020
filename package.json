@@ -11,11 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "cors": "^2.8.5",
-=======
     "bcrypt": "^6.0.0",
->>>>>>> 5457bebf078208594d50e3894551fc8131a5b9a7
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.2"
